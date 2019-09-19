@@ -173,4 +173,17 @@ This inc.navbar mean inside the folder  resource/view/inc/ there is a file named
 	php artisan make:model Post -m
 	// Here -m demote the Migration whcih help to create tables inside database 
 	
-
+## Setp 25: Create column using migration files
+	// got ot database/migration/ 
+	// here you will find  2019_09_19_091556_create_posts_table.php file 
+	// This file is migration file used to create a table here two function are there one is UP & another one is down 
+	// Up Function will help to add column in side the databalse while down is used to scrap drop the table
+	  public function up()
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->mediumText('body');
+            $table->timestamps();
+        });
+    }
