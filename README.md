@@ -165,4 +165,12 @@ This inc.navbar mean inside the folder  resource/view/inc/ there is a file named
     <h1>About </h1>
     <p> WellCome to aws app About   </p>
 @endsection
- 
+
+## Step 23: Create new controller i.e. POST Controller 
+	
+	$ php artisan make:controller PostController
+## Step 24: Create Model (of Mdel view controller) 
+	php artisan make:model Post -m
+	// Here -m demote the Migration whcih help to create tables inside database 
+	
+
