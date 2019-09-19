@@ -93,6 +93,8 @@ Then update case senstive information and restart  the server.. & ejoy your virt
 	// This error can be resolved by using following command, is caused by unavailability of popper.js file.
 	// type following command and run
 	$ npm install --save popper.js
+	// After this please run
+	$ npm run dev
 
 ## Step14: Change the App_NANE= yuorApp_name at .env file this will update your application title
 	npm run dev
