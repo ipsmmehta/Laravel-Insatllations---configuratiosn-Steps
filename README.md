@@ -168,7 +168,8 @@ This inc.navbar mean inside the folder  resource/view/inc/ there is a file named
 
 ## Step 23: Create new controller i.e. POST Controller 
 	
-	$ php artisan make:controller PostController
+	$ php artisan make:controller PostController --resource
+	
 ## Step 24: Create Model (of Mdel view controller) 
 	php artisan make:model Post -m
 	// Here -m demote the Migration whcih help to create tables inside database 
