@@ -188,3 +188,7 @@ This inc.navbar mean inside the folder  resource/view/inc/ there is a file named
             $table->timestamps();
         });
     }
+
+## Step 26: User Authentication(Login & registration )
+	php artisan make:auth 
+	// This command enables all the user model, controller for suporting all the login and registration process
