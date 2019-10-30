@@ -195,7 +195,8 @@ This inc.navbar mean inside the folder  resource/view/inc/ there is a file named
 	
 ## Step 27: Upload file at the server 
 
- // Start of  Handling and file uploading  
+ // Start of  Handling and file uploading
+ 
          if($request->hasFile('cover_image')){
                 // Get File name with extentions
                 $fileNameWithEXT = $request->file('cover_image')->getClientOriginalName();
