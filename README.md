@@ -192,3 +192,32 @@ This inc.navbar mean inside the folder  resource/view/inc/ there is a file named
 ## Step 26: User Authentication(Login & registration )
 	php artisan make:auth 
 	// This command enables all the user model, controller for suporting all the login and registration process
+	
+## Step 27: Upload file at the server 
+
+ // Start of  Handling and file uploading  
+         if($request->hasFile('cover_image')){
+                // Get File name with extentions
+                $fileNameWithEXT = $request->file('cover_image')->getClientOriginalName();
+                // Get FileName only 
+                    $fileName = pathinfo($fileNameWithEXT, PATHINFO_FILENAME);
+                // Get FileExtention only
+                    $fileExtention = $request->file('cover_image')->getClientOriginalExtension();
+                // File name to store 
+                $fineNameToStore = $fileName.'_'.time().'.'.$fileExtention;
+                // Upload Image 
+                $path = $request->file('cover_image')->storeAs('public/cover_images',$fineNameToStore);
+         }else{
+                $fineNameToStore='default.jpg';
+         }
+         // End of  Handling and file uploading
+	 
+	 // After doing this code you need to rum following command 
+	 
+	 php artisan storage:link
+	 
+	 // This command will link the laravel internal storage folder with the pubic folder with a shortcut 
+	 
+	 // If you  still get some error then please check the <form></form> tag it must include enctype..
+	 
+	     <form method="POST" enctype="multipart/form-data" action="{{ action('HomeController@store')}}" accept-charset="UTF-8" >
